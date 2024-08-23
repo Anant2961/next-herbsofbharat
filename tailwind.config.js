@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        whiteText: "#fff",
+        darkText: "#000000",
+        lightText: "#9b9b9b",
+        greenText: "#1d8221",
+        redText: "#E02B2B ",
+        skyText: "#32BDE8",
+      },
+      flex: {
+        full: "0 0 100%",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,5 +25,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
 };
