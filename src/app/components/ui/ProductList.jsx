@@ -8,7 +8,7 @@ const Productlist = () => {
       <div className="mb-10">
         <div className="flex items-center justify-between">
           <h2 className="text-4xl font-bold">Our Products</h2>
-          <Link href="/product"> All our products</Link>
+          <Link href="/products"> All our products</Link>
         </div>
         <div className="w-full h-[1px] bg-gray-200 mt-2" />
       </div>

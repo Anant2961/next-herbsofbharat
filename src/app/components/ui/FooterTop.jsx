@@ -9,11 +9,11 @@ export default function FooterTop() {
         "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
     },
     {
-      name: "10-year warranty",
+      name: "Authencity Guaranteed",
       imageSrc:
         "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
       description:
-        "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+        "In our products its our guarantee that they come with best of the herbs of from bharat.",
     },
     {
       name: "Exchanges",
@@ -25,7 +25,7 @@ export default function FooterTop() {
   ];
   return (
     <Container className="py-0">
-      <div className=" rounded-2xl bg-[#f6f6f6] px-6 py-16 sm:p-16">
+      <div className=" rounded-2xl bg-gray-100 px-6 py-16 sm:p-16">
         <div className="mx-auto max-w-xl lg:max-w-none">
           <div className="text-center">
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900">
@@ -44,7 +44,7 @@ export default function FooterTop() {
                   <img
                     src={item?.imageSrc}
                     alt="image"
-                    className="mx-auto h-16 w-16"
+                    className="mx-auto h-16 w-16 mix-blend-multiply"
                   />
                 </div>
               </div>

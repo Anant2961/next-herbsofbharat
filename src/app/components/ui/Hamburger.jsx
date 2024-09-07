@@ -11,11 +11,11 @@ import {
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
-  { title: "Shop", link: "/product" },
+  { title: "Shop", link: "/products" },
   { title: "Cart", link: "/cart" },
   { title: "Orders", link: "/orders" },
+  { title: "Favourite", link: "/favourites" },
   { title: "My Account", link: "/profile" },
-  { title: "Blog", link: "/blog" },
 ];
 
 export default function Hamburger() {
@@ -24,7 +24,7 @@ export default function Hamburger() {
       <Container>
         <Menu>
           <MenuButton>
-            <AlignJustify className="text-base mt-1" />
+            <AlignJustify className="text-base" />
           </MenuButton>
           <Transition
             enter="transition ease-out duration-75"

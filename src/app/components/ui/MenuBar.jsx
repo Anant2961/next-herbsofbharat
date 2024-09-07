@@ -1,5 +1,5 @@
 "use client";
-import store from "@/app/lib/store";
+import store from "../../lib/store";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingBag, User, Star } from "lucide-react";
@@ -21,15 +21,15 @@ export default function MenuBar() {
           <User className="hover:text-skyText duration-200 cursor-pointer" />
         )}
       </Link>
-      <Link href="/favorite" className="relative block">
+      <Link href="/favourites" className="relative block">
         <Star className="hover:text-skyText duration-200 cursor-pointer" />
-        <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[12px] rounded-full w-4 h-4">
+        <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-xs rounded-full w-4 h-4">
           {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"}
         </span>
       </Link>
       <Link href="/cart" className="relative block">
         <ShoppingBag className="hover:text-skyText duration-200 cursor-pointer" />
-        <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[12px] rounded-full w-4 h-4">
+        <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-xs rounded-full w-4 h-4">
           {cartProduct?.length > 0 ? cartProduct?.length : "0"}
         </span>
       </Link>

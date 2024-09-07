@@ -1,4 +1,4 @@
-import store from "@/app/lib/store";
+import store from "../../lib/store";
 
 export default function CheckoutBtn({ products }) {
   const { currentUser } = store();

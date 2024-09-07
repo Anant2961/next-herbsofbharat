@@ -11,15 +11,11 @@ import {
 } from "@headlessui/react";
 import FormattedPrice from "./FormattedPrice";
 import ProductSideNav from "./ProductSideNav";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCard({ item }) {
-  const [imageindex, setImageindex] = useState(0);
-  const [transition, setTransition] = useState(false);
   var isOpen = false;
-
   const open = () => {
     isOpen = true;
   };
@@ -28,20 +24,6 @@ export default function ProductCard({ item }) {
   };
   const percentage =
     ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
-
-  const handleProduct = () => {
-    <Link href={`/products/${item?._id}`} />;
-    console.log("Product clicked");
-  };
-  const handleReplace = () => {
-    if (transition) return;
-    setTransition(true);
-    setTimeout(() => {
-      setImageindex((prev) => (prev + 1) % item?.images.length);
-      console.log("Product replaced");
-      setTransition(false);
-    }, 800);
-  };
 
   return (
     <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
@@ -52,18 +34,17 @@ export default function ProductCard({ item }) {
         >
           save {percentage.toFixed(0)}%
         </span>
-        <Image
-          onClick={handleProduct}
-          src={item?.images[imageindex]}
-          width={0}
-          height={0}
-          sizes="100vw"
-          alt="productImage"
-          className={` w-full h-full rounded-md object-cover group-hover:scale-110 duration-300 ${
-            transition ? "-translate-x-full" : "translate-x-0"
-          }`}
-        />
-        <ProductSideNav product={item} handleReplace={handleReplace} />
+        <Link href={`/products/${item?._id}`}>
+          <Image
+            src={item?.images[0]}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt="productImage"
+            className="w-full h-full rounded-md object-cover transition ease-in-out scale-75 duration-300"
+          />
+        </Link>
+        <ProductSideNav product={item} />
       </div>
       <div className="flex flex-col gap-2 px-2 pb-2">
         <h3 className="text-xs uppercase font-semibold text-lightText">

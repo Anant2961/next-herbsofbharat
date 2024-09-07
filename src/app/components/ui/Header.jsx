@@ -1,18 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
-import { User, Star, ShoppingBag } from "lucide-react";
 import SearchBar from "./SearchBar";
 import Hamburger from "./Hamburger";
 import MenuBar from "./MenuBar";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
-  { title: "Shop", link: "/product" },
+  { title: "Shop", link: "/products" },
   { title: "Cart", link: "/cart" },
   { title: "Orders", link: "/orders" },
+  { title: "Favourite", link: "/favourites" },
   { title: "My Account", link: "/profile" },
-  { title: "Blog", link: "/blog" },
 ];
 
 export default async function Header() {

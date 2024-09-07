@@ -3,7 +3,7 @@ import Link from "next/link";
 import FormattedPrice from "./FormattedPrice";
 import AddtoCartbtn from "./AddtoCartbtn";
 import toast from "react-hot-toast";
-import store from "@/app/lib/store";
+import store from "../../lib/store";
 import { CircleX, CircleCheckBig } from "lucide-react";
 
 export default function CartProduct({ product }) {
@@ -16,7 +16,7 @@ export default function CartProduct({ product }) {
   };
   return (
     <div className="flex py-6 sm:py-10">
-      <Link href="/product">
+      <Link href="/products">
         <img
           src={product?.images[0]}
           alt="productImage"

@@ -12,21 +12,17 @@ module.exports = {
         darkText: "#000000",
         lightText: "#9b9b9b",
         greenText: "#1d8221",
-        redText: "#E02B2B ",
+        redText: "#E02B2B",
         skyText: "#32BDE8",
       },
       flex: {
         full: "0 0 100%",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      variants: {
+        extend: {
+          translate: ["group-hover", "hover"],
+        },
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/typography"),
-  ],
 };

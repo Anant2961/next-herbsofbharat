@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { SquareChevronLeft, SquareChevronRight } from "lucide-react";
-import data from "@/app/api/index";
+import data from "../../api/index";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -42,7 +42,9 @@ export default function CarouselBanner() {
           key={category._id}
           className="flex items-center gap-x-2 p-1 border border-gray-100 mr-1 flex-1 rounded-md hover:border-skyText hover:shadow-lg"
         >
-          <img
+          <Image
+            width={40}
+            height={40}
             src={category.image}
             alt="categoryImage"
             className="w-10 h-10 rounded-full object-cover"

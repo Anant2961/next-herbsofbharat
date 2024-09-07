@@ -1,10 +1,10 @@
 "use client";
 import { twMerge } from "tailwind-merge";
-import store from "@/app/lib/store";
 import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
 import PriceTag from "./PriceTag";
 import { Plus, Minus } from "lucide-react";
+import store from "../../lib/store";
 export default function AddtoCartbtn({
   className,
   title,
@@ -46,7 +46,7 @@ export default function AddtoCartbtn({
   };
 
   const newClassName = twMerge(
-    "bg-[#f7f7f7] uppercase text-xs py-3 text-center rounded-full font-semibold hover:bg-black hover:text-white hover:scale-105 duration-200 cursor-pointer",
+    "bg-gray-100 uppercase text-xs py-3 text-center rounded-full font-semibold hover:bg-black hover:text-white hover:scale-105 duration-200 cursor-pointer",
     className
   );
 
@@ -84,7 +84,7 @@ export default function AddtoCartbtn({
         <div className="flex self-center items-center justify-center gap-2">
           <button
             onClick={handleDeleteProduct}
-            className="bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-skyText rounded-full text-sm hover:bg-white duration-200 cursor-pointer"
+            className="bg-gray-100 text-black p-2 border-[1px] border-gray-200 hover:border-skyText rounded-full text-sm hover:bg-white duration-200 cursor-pointer"
           >
             <Minus />
           </button>
@@ -93,7 +93,7 @@ export default function AddtoCartbtn({
           </p>
           <button
             onClick={handleAddToCart}
-            className="bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-skyText rounded-full text-sm hover:bg-white duration-200 cursor-pointer"
+            className="bg-gray-100 text-black p-2 border-[1px] border-gray-200 hover:border-skyText rounded-full text-sm hover:bg-white duration-200 cursor-pointer"
           >
             <Plus />
           </button>
