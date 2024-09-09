@@ -35,7 +35,6 @@ const store = create(
             set({ currentUser: docSnap.data(), isLoading: false });
           }
         } catch (error) {
-          console.log("getUserInfo error", error);
           set({ currentUser: null, isLoading: false });
         }
       },

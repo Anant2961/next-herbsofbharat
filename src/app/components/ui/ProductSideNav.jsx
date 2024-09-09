@@ -33,7 +33,7 @@ export default function ProductSideNav({ product }) {
         onClick={handleFavorite}
         className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200"
       >
-        {existingProduct ? <Heart fill="#FF0000" strokeWidth={1} /> : <Heart />}
+        {existingProduct ? <Heart fill="#d40b0b" strokeWidth={1} /> : <Heart />}
       </span>
       <span className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200">
         <ArrowLeftRight />

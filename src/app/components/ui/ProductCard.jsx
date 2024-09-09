@@ -53,9 +53,9 @@ export default function ProductCard({ item, setSearchText }) {
         </h3>
         <h2 className="text-lg font-bold line-clamp-2">{item?.name}</h2>
         <div className="text-base text-lightText flex items-center">
-          <Star fill="yellow" strokeWidth={1} />
-          <Star fill="yellow" strokeWidth={1} />
-          <Star fill="yellow" strokeWidth={1} />
+          <Star fill="#FFD700" strokeWidth={1} />
+          <Star fill="#FFD700" strokeWidth={1} />
+          <Star fill="#FFD700" strokeWidth={1} />
           <Star />
           <Star />
         </div>

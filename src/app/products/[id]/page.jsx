@@ -27,7 +27,6 @@ export default function Page() {
   }, [id]);
   useEffect(() => {
     setImgUrl(productsdata?.images?.[0]);
-    console.log("Products data:", productsdata);
   }, [productsdata]);
 
   return (

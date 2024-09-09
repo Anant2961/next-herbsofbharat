@@ -33,11 +33,7 @@ const Categories = () => {
     };
     fetchData(); // Fetch when category changes
   }, [category]);
-  useEffect(() => {
-    return () => {
-      console.log(allProducts);
-    };
-  }, [allProducts]);
+  useEffect(() => {}, [allProducts]);
 
   return (
     <Container>

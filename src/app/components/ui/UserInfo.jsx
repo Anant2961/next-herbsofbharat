@@ -3,7 +3,6 @@ import { auth } from "@/app/lib/firebase";
 import Container from "./Container";
 
 export default function UserInfo({ currentUser }) {
-  console.log(currentUser);
   return (
     <Container className="py-5 text-white">
       <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-16">
