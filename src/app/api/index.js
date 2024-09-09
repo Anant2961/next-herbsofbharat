@@ -1,29 +1,14 @@
 const cat = {
-  WheyProtein: "Whey Protein",
-  ProteinShake: "Protein Shake",
-  ProteinBar: "Protein Bar",
   CordycepsShilajit: "Cordyceps ShilaJit",
   CordySterone: "CordySterone",
   CordyTesto: "CordyTesto",
   CordyShila: "CordyShila",
   CordyLivoFuel: "LivoFuel",
-  tvAndAudio: "tvAndAudio",
-  tvBox: "tvBox",
-  powerTools: "powerTools",
-  headphones: "headphones",
-  cellPhones: "cellPhones",
-  smartWatches: "smartWatches",
-  gameAndVideo: "gameAndVideo",
-  robotClean: "robotClean",
-  sportWatches: "sportWatches",
-  tablets: "tablets",
-  computersAndLaptop: "computersAndLaptop",
-  camerasAndPhotos: "camerasAndPhotos",
 };
 export const categories = [
   {
     _id: 1001,
-    name: "LivoFuel",
+    name: "Livo Fuel",
     image: "https://i.ibb.co/RPrY0pP/111ce078-fa1f-4a4d-97aa-bdacf6b7b06d.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -31,7 +16,7 @@ export const categories = [
   },
   {
     _id: 1002,
-    name: "CordycepShilajit",
+    name: "Cordycep Shilajit",
     image: "https://i.ibb.co/X2vFZWg/cordytesto-shilajit-testorone.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -39,7 +24,7 @@ export const categories = [
   },
   {
     _id: 1003,
-    name: "CordyTesto",
+    name: "Cordy Testo",
     image: "https://i.ibb.co/RSJbNwL/cordyshala-60ml.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -47,7 +32,7 @@ export const categories = [
   },
   {
     _id: 1004,
-    name: "CordySterone",
+    name: "Cordy Sterone",
     image: "https://i.ibb.co/99cXbCT/cordy-testorone-legend.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -55,7 +40,7 @@ export const categories = [
   },
   {
     _id: 1005,
-    name: "CordyShila",
+    name: "Cordy Shila",
     image: "https://i.ibb.co/KxdL6By/cordytesto.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -63,7 +48,7 @@ export const categories = [
   },
   {
     _id: 1006,
-    name: "LivoFuel",
+    name: "Livo Fuel",
     image: "https://i.ibb.co/RPrY0pP/111ce078-fa1f-4a4d-97aa-bdacf6b7b06d.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
@@ -71,67 +56,10 @@ export const categories = [
   },
 ];
 
-export const highlightsProducts = [
-  {
-    _id: 3001,
-    name: "New Deals at Best Prices",
-    title: "From $40.00",
-    buttonTitle: "Browse Deals",
-    image: "https://i.ibb.co/G951N5B/highlights-One.webp",
-    _base: "/product",
-    color: "#000000",
-  },
-  {
-    _id: 3002,
-    name: "Colorful Redmi  Note 6 Pro",
-    title: "From $40.00",
-    buttonTitle: "Shop Cellphone",
-    image: "https://i.ibb.co/bLRNKGq/highlights-Two.webp",
-    _base: "/category/cellPhones",
-    color: "#ffffff",
-  },
-  {
-    _id: 3003,
-    name: "1000 mAh Power Bank",
-    title: "From $40.00",
-    buttonTitle: "Shop Now",
-    image: "https://i.ibb.co/svWYstT/highlights-Three.webp",
-    _base: "/product",
-    color: "#ffffff",
-  },
-];
-
-export const blogsData = [
-  {
-    _id: 4001,
-    image: "https://i.ibb.co/XbQf5HS/blogOne.webp",
-    title: "iPhone 15 rear camera design will be available",
-    _base: "Technology",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
-  },
-  {
-    _id: 4002,
-    image: "https://i.ibb.co/wzNpcwp/blogTwo.webp",
-    title: "Setup your surround sound speaker",
-    _base: "Samrt thing",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
-  },
-  {
-    _id: 4003,
-    image: "https://i.ibb.co/prdZ3s8/blog-Three.webp",
-    title: "Hook up a receiver for your home theater",
-    _base: "Life style",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
-  },
-];
-
 export const products = [
   {
     _id: 2001,
-    name: "CordyShila",
+    name: "Cordy Shila",
     images: [
       "https://i.ibb.co/3YDjmgn/cordyshala-shilajit.jpg",
       "https://i.ibb.co/0fB0YyM/another-advertisement.jpg",
@@ -146,17 +74,17 @@ export const products = [
     quantity: 1,
     rating: 4.5,
     reviews: 50,
-    category: "CordyShila",
+    category: "Cordy Shila",
     colors: ["red", "blue", "green", "yellow", "black", "white"],
     brand: "Cordycep",
     isStock: true,
-    overView: "CordyShila",
+    overView: "Cordy Shila",
     isNew: true,
     _base: cat?.CordyShila,
   },
   {
     _id: 2002,
-    name: "CordyTesto",
+    name: "Cordy Testo",
     images: [
       "https://i.ibb.co/NFgH631/cordytesto.jpg",
       "https://i.ibb.co/X2vFZWg/cordytesto-shilajit-testorone.jpg",
@@ -171,17 +99,17 @@ export const products = [
     quantity: 1,
     rating: 4.5,
     reviews: 50,
-    category: "CordyTesto",
+    category: "Cordy Testo",
     colors: ["red", "blue", "green", "yellow", "black", "white"],
     brand: "CordyCeps",
     isStock: true,
-    overView: "CordyTesto",
+    overView: "Cordy Testo",
     isNew: true,
     _base: cat?.CordyTesto,
   },
   {
     _id: 2003,
-    name: "Cordysterone ",
+    name: "Cordy Sterone",
     images: [
       "https://i.ibb.co/99cXbCT/cordy-testorone-legend.jpg",
       "https://i.ibb.co/gMqzk5Z/cordy-sterone-main.jpg",
@@ -197,11 +125,11 @@ export const products = [
     quantity: 1,
     rating: 4.5,
     reviews: 50,
-    category: "CordySterone",
+    category: "Cordy Sterone",
     colors: ["red", "blue", "green", "yellow", "black", "white"],
     brand: "CordySterone",
     isStock: true,
-    overView: "CordyTesto",
+    overView: "Cordy Testo",
     isNew: true,
     _base: cat?.CordySterone,
   },
@@ -223,7 +151,7 @@ export const products = [
     quantity: 1,
     rating: 4.5,
     reviews: 50,
-    category: "LivoFuel",
+    category: "Livo Fuel",
     colors: ["red", "blue", "green", "yellow", "black", "white"],
     brand: "CordyCeps",
     isStock: true,
@@ -236,7 +164,6 @@ export const products = [
 const data = {
   products,
   categories,
-  blogsData,
 };
 
 export default data;

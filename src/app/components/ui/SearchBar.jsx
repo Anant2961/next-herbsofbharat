@@ -1,11 +1,20 @@
 "use client";
-import react, { useState } from "react";
+import react, { useState, useEffect } from "react";
 import { X, Search } from "lucide-react";
+import ProductCard from "./ProductCard";
 
 const SearchBar = ({ products }) => {
   const [searchText, setSearchText] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  useEffect(() => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setSearchResults(filteredProducts);
+  }, [searchText]);
+
   return (
-    <div className=" flex items-center md:inline-flex max-w-3xl w-3/5 relative ml-4 mr-4 ">
+    <div className=" flex md:inline-flex w-full max-w-3xl relative ml-4 mr-4 ">
       <input
         type="text"
         onChange={(e) => setSearchText(e.target.value)}
@@ -23,6 +32,30 @@ const SearchBar = ({ products }) => {
           <Search className="text-md" />
         )}
       </div>
+      {/* Search product will go here */}
+      {searchText && (
+        <div className="absolute left-0 top-20 w-full mx-auto max-h-[500px] px-10 py-5 bg-white z-20 overflow-y-scroll text-black shadow-lg shadow-skyText scrollbar-hide">
+          {searchResults.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+              {searchResults?.map((item) => (
+                <ProductCard
+                  key={item?._id}
+                  item={item}
+                  setSearchText={setSearchText}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="py-10 bg-gray-50 w-full flex items-center justify-center border border-gray-600 rounded-md">
+              <p className="text-xl font-normal">
+                Nothing matches with your search keywords{" "}
+                <span className="underline underline-offset-2 decoration-[1px] text-red-500 font-semibold">{`(${searchText})`}</span>
+              </p>
+              . Please try again
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

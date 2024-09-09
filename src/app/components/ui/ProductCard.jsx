@@ -14,7 +14,7 @@ import ProductSideNav from "./ProductSideNav";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, setSearchText }) {
   var isOpen = false;
   const open = () => {
     isOpen = true;
@@ -41,6 +41,7 @@ export default function ProductCard({ item }) {
             height={0}
             sizes="100vw"
             alt="productImage"
+            onClick={() => setSearchText("")}
             className="w-full h-full rounded-md object-cover transition ease-in-out scale-75 duration-300"
           />
         </Link>

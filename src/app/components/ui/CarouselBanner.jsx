@@ -4,6 +4,7 @@ import { SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import data from "../../api/index";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -38,7 +39,8 @@ export default function CarouselBanner() {
       CustomRightArrow={<SquareChevronRight />}
     >
       {categories.map((category) => (
-        <div
+        <Link
+          href="/products"
           key={category._id}
           className="flex items-center gap-x-2 p-1 border border-gray-100 mr-1 flex-1 rounded-md hover:border-skyText hover:shadow-lg"
         >
@@ -50,7 +52,7 @@ export default function CarouselBanner() {
             className="w-10 h-10 rounded-full object-cover"
           />
           <p className="text-sm font-semibold"> {category.name}</p>
-        </div>
+        </Link>
       ))}
     </Carousel>
   );

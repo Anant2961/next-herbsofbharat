@@ -43,7 +43,7 @@ export default function Page() {
           </p>
           <Link
             href="/products"
-            className="w-full mt-2 rounded-md border border-transparent px-8 py-3 text-base font-medium text-amber-900 bg-gray-100 sm:w-auto hover:bg-black hover:text-white duration-200"
+            className="w-full mt-2 rounded-md border border-transparent px-8 py-3 text-base font-medium text-black bg-gray-100 sm:w-auto hover:bg-black hover:text-white duration-200"
           >
             Add Products
           </Link>
