@@ -13,6 +13,12 @@ import FormattedPrice from "./FormattedPrice";
 import ProductSideNav from "./ProductSideNav";
 import Image from "next/image";
 import Link from "next/link";
+import PropTypes from "prop-types";
+
+ProductCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  setSearchText: PropTypes.func.isRequired,
+};
 
 export default function ProductCard({ item, setSearchText }) {
   var isOpen = false;
@@ -21,6 +27,9 @@ export default function ProductCard({ item, setSearchText }) {
   };
   const close = () => {
     isOpen = false;
+  };
+  const handleSearchBar = () => {
+    if (setSearchText) setSearchText("");
   };
   const percentage =
     ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
@@ -41,7 +50,7 @@ export default function ProductCard({ item, setSearchText }) {
             height={0}
             sizes="100vw"
             alt="productImage"
-            onClick={() => setSearchText("")}
+            onClick={handleSearchBar}
             className="w-full h-full rounded-md object-cover transition ease-in-out scale-75 duration-300"
           />
         </Link>
