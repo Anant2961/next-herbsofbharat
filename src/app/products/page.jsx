@@ -3,7 +3,8 @@ import ProductCard from "@/app/components/ui/ProductCard";
 import CategoriesFilters from "@/app/components/ui/CategoriesFilters";
 
 export default async function Page() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const url = process.env.NEXT_PUBLIC_APP_URL;
+  const res = await fetch(`${url}/api/products`);
   const id = await res.json();
   return (
     <Container>

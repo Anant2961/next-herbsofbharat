@@ -6,6 +6,7 @@ import CategoriesFilters from "@/app/components/ui/CategoriesFilters";
 import ProductCard from "@/app/components/ui/ProductCard";
 
 const Categories = () => {
+  const url = process.env.NEXT_PUBLIC_APP_URL;
   const pathname = usePathname(); // Get current path
   const [allProducts, setAllProducts] = useState([]);
   const category = pathname.split("/")[2]; // Extract the dynamic category part of the URL
@@ -21,7 +22,7 @@ const Categories = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (category) {
-        const endpoint = `http://localhost:3000/api/categories/${category}`;
+        const endpoint = `${url}/api/categories/${category}`;
         try {
           const response = await fetch(endpoint);
           const data = await response.json();

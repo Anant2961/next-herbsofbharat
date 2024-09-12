@@ -8,6 +8,7 @@ import AddtoCartbtn from "@/app/components/ui/AddtoCartbtn";
 import { Star, ScanEye } from "lucide-react";
 
 export default function Page() {
+  const url = process.env.NEXT_PUBLIC_APP_URL;
   const [productsdata, setProductsdata] = useState([]);
   const [imgUrl, setImgUrl] = useState("");
 
@@ -15,7 +16,7 @@ export default function Page() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const endpoint = `http://localhost:3000/api/products/${id}`;
+        const endpoint = `${url}/api/products/${id}`;
         const response = await fetch(endpoint);
         const data = await response.json();
         setProductsdata(data);

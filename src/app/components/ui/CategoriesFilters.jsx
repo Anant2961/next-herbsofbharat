@@ -3,13 +3,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const CategoriesFilters = ({ id }) => {
+  const url = process.env.NEXT_PUBLIC_APP_URL;
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/categories");
+        const response = await fetch(`${url}/api/categories`);
         const data = await response.json();
         setCategories(data);
       } catch (error) {
