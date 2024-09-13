@@ -10,7 +10,7 @@ const CategoriesFilters = ({ id }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${url}/api/categories`);
+        const response = await fetch(`/api/categories`);
         const data = await response.json();
         setCategories(data);
       } catch (error) {

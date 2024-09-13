@@ -22,7 +22,7 @@ const Categories = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (category) {
-        const endpoint = `${url}/api/categories/${category}`;
+        const endpoint = `/api/categories/${category}`;
         try {
           const response = await fetch(endpoint);
           const data = await response.json();

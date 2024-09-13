@@ -6,6 +6,7 @@ import PriceTag from "@/app/components/ui/PriceTag";
 import FormattedPrice from "@/app/components/ui/FormattedPrice";
 import AddtoCartbtn from "@/app/components/ui/AddtoCartbtn";
 import { Star, ScanEye } from "lucide-react";
+import ProductSideNav from "@/app/components/ui/ProductSideNav";
 
 export default function Page() {
   const url = process.env.NEXT_PUBLIC_APP_URL;
@@ -16,7 +17,7 @@ export default function Page() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const endpoint = `${url}/api/products/${id}`;
+        const endpoint = `/api/products/${id}`;
         const response = await fetch(endpoint);
         const data = await response.json();
         setProductsdata(data);

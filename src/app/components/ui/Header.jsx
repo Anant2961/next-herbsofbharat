@@ -16,7 +16,8 @@ const bottomNavigation = [
 
 export default async function Header() {
   const url = process.env.NEXT_PUBLIC_APP_URL;
-  const res = await fetch(`${url}/api/products`);
+  const endpoint = `${url}/api/products`;
+  const res = await fetch(endpoint);
   const product = await res.json();
   return (
     <div className="w-full bg:whiteText">
