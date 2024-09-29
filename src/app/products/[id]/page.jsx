@@ -34,7 +34,7 @@ export default function Page() {
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-start">
+        <div className="w-full flex flex-start ">
           <div>
             {productsdata?.images?.map((item, index) => (
               <img
@@ -50,6 +50,7 @@ export default function Page() {
             ))}
           </div>
           <div>
+            <ProductSideNav product={productsdata} />
             <img src={imgUrl} alt="mainImage" />
           </div>
         </div>

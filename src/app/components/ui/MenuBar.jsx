@@ -7,15 +7,15 @@ import { ShoppingBag, User, Star } from "lucide-react";
 export default function MenuBar() {
   const { currentUser, cartProduct, favoriteProduct } = store();
   return (
-    <div className="flex items-center gap-x-6 text-2xl">
+    <div className="flex items-center gap-x-4 text-xl">
       <Link href="/profile">
         {currentUser ? (
           <Image
             src={currentUser?.avatar}
             alt="profileImg"
-            width={40}
-            height={40}
-            className="w-10 h-10 rounded-full object-cover"
+            width={20}
+            height={20}
+            className="w-5 h-5 rounded-full object-cover"
           />
         ) : (
           <User className="hover:text-skyText duration-200 cursor-pointer" />

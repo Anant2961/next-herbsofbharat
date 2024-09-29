@@ -7,8 +7,9 @@ export default function HomeBanner() {
     <Container className="relative py-5 overflow-hidden">
       <div className="relative hover:scale-110 duration-200 cursor-pointer">
         <Image
-          width={200}
+          width={150}
           height={200}
+          aspectRatio={4 / 3}
           src="https://i.ibb.co/7GNTGcD/main-Homebanner.jpg"
           alt="homeBanner"
           className="w-full h-full object-cover rounded-md hover:scale-105 duration-200 cursor-pointer"
