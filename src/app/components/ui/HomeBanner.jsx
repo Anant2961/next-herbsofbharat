@@ -9,7 +9,6 @@ export default function HomeBanner() {
         <Image
           width={150}
           height={200}
-          aspectRatio={4 / 3}
           src="https://i.ibb.co/7GNTGcD/main-Homebanner.jpg"
           alt="homeBanner"
           className="w-full h-full object-cover rounded-md hover:scale-105 duration-200 cursor-pointer"
