@@ -34,7 +34,7 @@ export default function CarouselBanner() {
       infinite={true}
       autoPlay={true}
       ssr
-      className="flex flex-row p-4 max-w-screen-xl mx-auto lg:px-0 relative"
+      className="flex flex-row p-4 max-w-screen-xl mx-auto lg:px-0 relative z-0"
       CustomLeftArrow={<SquareChevronLeft />}
       CustomRightArrow={<SquareChevronRight />}
     >

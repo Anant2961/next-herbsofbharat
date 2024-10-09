@@ -63,7 +63,7 @@ export default function AddtoCartbtn({
   const getDiscountedPrice = () => {
     if (existingProduct) {
       if (product) {
-        return product?.discountedPrice * product?.quantity;
+        return product?.discountedPrice * existingProduct?.quantity;
       }
     } else {
       return product?.discountedPrice;

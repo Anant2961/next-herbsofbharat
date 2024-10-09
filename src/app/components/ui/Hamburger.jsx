@@ -20,7 +20,7 @@ const bottomNavigation = [
 
 export default function Hamburger() {
   return (
-    <div className=" block md:hidden">
+    <div className="block md:hidden">
       <Container>
         <Menu>
           <MenuButton>
@@ -36,7 +36,7 @@ export default function Hamburger() {
           >
             <MenuItems
               anchor="bottom end"
-              className="w-52 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+              className="w-40 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
             >
               {bottomNavigation.map(({ title, link }) => (
                 <MenuItem key={title}>

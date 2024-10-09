@@ -6,7 +6,7 @@ import PriceTag from "@/app/components/ui/PriceTag";
 import FormattedPrice from "@/app/components/ui/FormattedPrice";
 import AddtoCartbtn from "@/app/components/ui/AddtoCartbtn";
 import { Star, ScanEye } from "lucide-react";
-import ProductSideNav from "@/app/components/ui/ProductSideNav";
+import ProductRouteSideNav from "@/app/components/ui/ProductRouteSideNav";
 
 export default function Page() {
   const url = process.env.NEXT_PUBLIC_APP_URL;
@@ -34,7 +34,7 @@ export default function Page() {
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="w-full flex flex-start ">
+        <div className="w-full flex flex-start relative">
           <div>
             {productsdata?.images?.map((item, index) => (
               <img
@@ -50,7 +50,9 @@ export default function Page() {
             ))}
           </div>
           <div>
-            <ProductSideNav product={productsdata} />
+            <div className="w-full relative group ">
+              <ProductRouteSideNav product={productsdata} />
+            </div>
             <img src={imgUrl} alt="mainImage" />
           </div>
         </div>
