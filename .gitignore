@@ -13,6 +13,9 @@
 /.next/
 /out/
 .py
+.java
+.cpp
+.class
 
 # production
 /build
